@@ -1,3 +1,9 @@
+.spa-shell-head, .spa-shell-head-logo, .spa-shell-head-acct,
+.spa-shell-head-search, .spa-shell-main, .spa-shell-main-nav,
+.spa-shell-main-content, .spa-shell-foot, .spa-shell-chat,
+.spa-shell-modal {
+    position: absolute;
+}
 
 :root {
     --slider-color: #fff;
@@ -13,9 +19,12 @@
     text-align: center;
     border-radius    : 8px 0 0 0;
     background-color : var(--slider-color);
+    z-index: 999;
 }
 
 .isOpen {
     height   : 100px;
     border-radius    : 8px 8px 0 8px;
 }
+
+

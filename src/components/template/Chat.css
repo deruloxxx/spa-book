@@ -5,26 +5,5 @@
     position: absolute;
 }
 
-:root {
-    --slider-color: #fff;
-}
-
-.spa-slider-base {
-    position : absolute;
-    bottom   : 0;
-    right    : 2px;
-    width    : 300px;
-    height   : 50px;
-    cursor   : pointer;
-    text-align: center;
-    border-radius    : 8px 0 0 0;
-    background-color : var(--slider-color);
-    z-index: 999;
-}
-
-.isOpen {
-    height   : 100px;
-    border-radius    : 8px 8px 0 8px;
-}
 
 

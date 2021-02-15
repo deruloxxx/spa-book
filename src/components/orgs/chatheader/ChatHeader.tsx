@@ -1,4 +1,3 @@
-import React from 'react';
 import './ChatHeader.css'
 
 export const ChatHeader = () => {

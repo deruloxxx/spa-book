@@ -1,31 +1,21 @@
-.spa-shell-main {
-    top: 40px;
-    left: 0;
-    bottom: 40px;
-    right: 0;
+:root {
+    --slider-color: #fff;
 }
 
-.spa-shell-main-content,
-.spa-shell-main-nav {
-    top: 0;
-    bottom: 0;
+.spa-slider-base {
+    position : absolute;
+    bottom   : 0;
+    right    : 2px;
+    width    : 300px;
+    height   : 50px;
+    cursor   : pointer;
+    text-align: center;
+    border-radius    : 8px 0 0 0;
+    background-color : var(--slider-color);
+    z-index: 999;
 }
 
-.spa-shell-main-nav {
-    width: 250px;
-    background: #eee;
-}
-
-.spa-x-closed .spa-shell-main-nav {
-    width: 0;
-}
-
-.spa-shell-main-content {
-    left: 250px;
-    right: 0;
-    background: #ddd;
-}
-
-.spa-x-closed .spa-shell-main-content {
-    left: 0;
+.isOpen {
+    height   : 100px;
+    border-radius    : 8px 8px 0 8px;
 }

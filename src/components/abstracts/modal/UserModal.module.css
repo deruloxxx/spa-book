@@ -8,4 +8,9 @@
     background: #fff;
     border-radius: 3px;
     z-index: 1;
+    position: fixed;
+}
+.spa-shell-modal-content {
+    display: flex;
+    justify-content: space-around;
 }

@@ -1,6 +1,6 @@
 import './LoginButton.css';
 import {useToggle} from "react-use";
-import {_UserModal} from "../../abstracts/modal/UserModal";
+import {UserModal} from "../../abstracts/modal/UserModal";
 
 export const LoginButton = () => {
     const [isModal, toggleModal] = useToggle(false);
@@ -12,13 +12,9 @@ export const LoginButton = () => {
                     <p>login button</p>
                 </div>
             </div>
-            {_UserModal({toggleMySelf: () => {return "hello"}})}
-
             {isModal &&
-            // <UserModal onClick={toggleMySelf} />
-                <div>Foo</div> //
+            <UserModal toggleMySelf={toggleModal} />
             }
         </>
-
     )
 }

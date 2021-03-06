@@ -1,4 +1,4 @@
-.spa-shell-modal {
+.spaShellModal {
     margin-top: -200px;
     margin-left: -200px;
     top: 50%;
@@ -10,7 +10,7 @@
     z-index: 1;
     position: fixed;
 }
-.spa-shell-modal-content {
+.spaShellModalContent {
     display: flex;
     justify-content: space-around;
 }

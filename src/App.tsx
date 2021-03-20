@@ -1,13 +1,16 @@
 import React from "react";
 import './App.css'
 import {Chat} from "./components/template/Chat";
+import {LoginStateProvider} from "./components/abstracts/loginState/loginStateProvider";
 
 function App() {
   return (
       <React.StrictMode>
-          <div>
-            <Chat />
-          </div>
+          <LoginStateProvider>
+              <div>
+                <Chat />
+              </div>
+          </LoginStateProvider>
       </React.StrictMode>
   );
 }

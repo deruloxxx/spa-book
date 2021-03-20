@@ -1,9 +1,12 @@
 import style from './UserModal.module.css'
+import {useLoginState} from "../loginState/useLoginState";
 
 export const UserModal = (props: {toggleMySelf: () => void}) => {
+    const loginState = useLoginState();
     const okFn = () => {
-        window.alert('ok');
+        window.alert(loginState.isLogin);
         props.toggleMySelf();
+        loginState.login();
     }
     const cancelFn = () => {
         window.alert('cancel');

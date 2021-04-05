@@ -7,12 +7,12 @@ import {ChatFooter} from "../orgs/chatfooter/ChatFooter";
 import './Chat.css';
 
 export const Chat = () => {
-    return (
-        <div>
-            <ChatHeader></ChatHeader>
-            <ChatHistory></ChatHistory>
-            <ChatSlider></ChatSlider>
-            <ChatFooter></ChatFooter>
-        </div>
-    )
+  return (
+    <div>
+      <ChatHeader></ChatHeader>
+      <ChatHistory></ChatHistory>
+      <ChatSlider></ChatSlider>
+      <ChatFooter></ChatFooter>
+    </div>
+  )
 }

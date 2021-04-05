@@ -5,13 +5,13 @@ import {LoginStateProvider} from "./components/abstracts/loginState/loginStatePr
 
 function App() {
   return (
-      <React.StrictMode>
-          <LoginStateProvider>
-              <div>
-                <Chat />
-              </div>
-          </LoginStateProvider>
-      </React.StrictMode>
+    <React.StrictMode>
+      <LoginStateProvider>
+        <div>
+          <Chat/>
+        </div>
+      </LoginStateProvider>
+    </React.StrictMode>
   );
 }
 

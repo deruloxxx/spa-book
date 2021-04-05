@@ -9,6 +9,13 @@ export const UserModal = (props: { toggleMySelf?: () => void }) => {
         <p>Modal</p>
         <p onClick={toggleMySelf}>X</p>
       </div>
+      <div>
+        <input type="text"/>
+      </div>
+      <div>
+        <button>OK</button>
+        <button>cancel</button>
+      </div>
     </div>
   );
 }

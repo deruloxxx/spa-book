@@ -1,8 +1,14 @@
 import style from './UserModal.module.css'
+import {ok} from "assert";
 
 export const UserModal = (props: { toggleMySelf?: () => void }) => {
-
-  const toggleMySelf = props.toggleMySelf || (() => window.alert("hello"))
+  const okFn = () => {
+    window.alert('OK')
+  }
+  const cancelFn = () => {
+    window.alert('cancel')
+  }
+  const toggleMySelf = props.toggleMySelf
   return (
     <div className={style.spaShellModal}>
       <div className={style.spaShellModalContent}>
@@ -13,8 +19,8 @@ export const UserModal = (props: { toggleMySelf?: () => void }) => {
         <input type="text"/>
       </div>
       <div>
-        <button>OK</button>
-        <button>cancel</button>
+        <button onClick={okFn}>OK</button>
+        <button onClick={cancelFn}>cancel</button>
       </div>
     </div>
   );

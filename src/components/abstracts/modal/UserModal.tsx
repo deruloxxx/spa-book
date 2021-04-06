@@ -1,14 +1,18 @@
 import style from './UserModal.module.css'
-import {ok} from "assert";
+import {useLoginState} from '../loginState/useLoginState';
 
-export const UserModal = (props: { toggleMySelf?: () => void }) => {
+export const UserModal = (props: { toggleMySelf: () => void }) => {
+  const loginState = useLoginState();
   const okFn = () => {
-    window.alert('OK')
+    window.alert(loginState.isLogin);
+    loginState.login();
+    props.toggleMySelf();
   }
   const cancelFn = () => {
-    window.alert('cancel')
+    window.alert("cancel")
+    props.toggleMySelf();
   }
-  const toggleMySelf = props.toggleMySelf
+  const toggleMySelf = props.toggleMySelf;
   return (
     <div className={style.spaShellModal}>
       <div className={style.spaShellModalContent}>

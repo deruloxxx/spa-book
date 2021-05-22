@@ -10,8 +10,8 @@ workflows:
   welcome01:
     # Run the welcome/run job in its own container
     jobs:
-      - welcome/run
+      - super-welcome/run
   welcome02:
     # Run the welcome/run job in its own container
     jobs:
-      - welcome/run
+      - super-welcome/run

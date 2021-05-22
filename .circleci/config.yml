@@ -11,9 +11,8 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       manual-hello-world:
-        steps:
-          - checkout
-          - run: echo "Hello world"
+        - checkout
+        - run: echo "Hello world"
   welcome02:
     # Run the welcome/run job in its own container
     jobs:

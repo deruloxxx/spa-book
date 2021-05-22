@@ -10,7 +10,7 @@ workflows:
   welcome01:
     # Run the welcome/run job in its own container
     jobs:
-      - super-welcome/run
+      - echo hello world
   welcome02:
     # Run the welcome/run job in its own container
     jobs:

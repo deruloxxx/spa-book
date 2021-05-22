@@ -10,7 +10,9 @@ workflows:
   welcome01:
     # Run the welcome/run job in its own container
     jobs:
-      - echo hello world
+      manual-hello-world:
+        steps:
+          - run: echo "Hello world"
   welcome02:
     # Run the welcome/run job in its own container
     jobs:

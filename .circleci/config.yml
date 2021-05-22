@@ -7,8 +7,10 @@ orbs:
 jobs: 
   one: # This is our first job.
     docker: # it uses the docker executor
-    steps:
       - image: circleci/ruby:2.4.1 # specifically, a docker image with ruby 2.4.1
+    steps:
+      - checkout
+      - run: echo "A first hello"
 # Steps are a list of commands to run inside the docker container above.
 # Orchestrate or schedule a set of jobs
 workflows:

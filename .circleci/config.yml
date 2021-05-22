@@ -4,19 +4,18 @@ version: 2.1
 orbs:
   # Declare a dependency on the welcome-orb
   super-welcome: circleci/welcome-orb@0.4.1
+jobs: 
+  one: # This is our first job.
+    docker: # it uses the docker executor
+      - image: circleci/ruby:2.4.1 # specifically, a docker image with ruby 2.4.1
+# Steps are a list of commands to run inside the docker container above.
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
   welcome01:
     # Run the welcome/run job in its own container
     jobs:
-      one: # This is our first job.
-        docker: # it uses the docker executor
-          - image: circleci/ruby:2.4.1 # specifically, a docker image with ruby 2.4.1
-            auth:
-              username: mydockerhub-user
-              password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-        # Steps are a list of commands to run inside the docker container above.
+      - one
   welcome02:
     # Run the welcome/run job in its own container
     jobs:

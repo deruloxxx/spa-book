@@ -10,9 +10,13 @@ workflows:
   welcome01:
     # Run the welcome/run job in its own container
     jobs:
-      manual-hello-world:
-        - checkout
-        - run: echo "Hello world"
+      one: # This is our first job.
+        docker: # it uses the docker executor
+          - image: circleci/ruby:2.4.1 # specifically, a docker image with ruby 2.4.1
+            auth:
+              username: mydockerhub-user
+              password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+        # Steps are a list of commands to run inside the docker container above.
   welcome02:
     # Run the welcome/run job in its own container
     jobs:
